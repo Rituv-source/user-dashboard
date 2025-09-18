@@ -202,7 +202,6 @@ select {
   font-size: 14px;
 }
 
-/* Login button */
 .login-card .btn {
   width: 100%;
   padding: 10px;
@@ -220,7 +219,6 @@ select {
   background: #3730a3;
 }
 
-/* Footer below button */
 .login-footer {
   margin-top: 16px;
   text-align: center;
