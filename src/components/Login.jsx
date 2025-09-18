@@ -1,31 +1,47 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Login() {
-  const navigate = useNavigate()
+  const [form, setForm] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
+
+  const update = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
-    e.preventDefault()
-    navigate('/dashboard')
-  }
+    e.preventDefault();
+    if (!form.email || !form.password) return;
+    navigate("/dashboard"); 
+  };
 
   return (
-    <div className="container">
-      <div className="card" style={{ maxWidth: 420, margin: '10vh auto' }}>
-        <div className="stack">
-          <h2>Welcome back</h2>
-          <form onSubmit={onSubmit} className="stack">
-            <div className="stack">
-              <label>Email</label>
-              <input type="email" placeholder="you@example.com" required />
-            </div>
-            <div className="stack">
-              <label>Password</label>
-              <input type="password" placeholder="••••••••" required />
-            </div>
-            <button className="btn" type="submit">Login</button>
-          </form>
-        </div>
+    <form onSubmit={onSubmit} className="login-card stack">
+      <h2>Welcome back</h2>
+
+      <label>Email</label>
+      <input
+        name="email"
+        type="email"
+        placeholder="you@example.com"
+        value={form.email}
+        onChange={update}
+      />
+
+      <label>Password</label>
+      <input
+        name="password"
+        type="password"
+        placeholder="********"
+        value={form.password}
+        onChange={update}
+      />
+
+      <button className="btn" type="submit">Login</button>
+
+      <div className="login-footer">
+        <a href="#" className="forgot">Forgot password?</a>
+        <p className="note">Use any email and password to continue</p>
       </div>
-    </div>
-  )
+    </form>
+  );
 }

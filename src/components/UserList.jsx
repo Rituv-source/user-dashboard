@@ -18,7 +18,6 @@ export default function UserList() {
     <div className="stack">
       <div className="pill">{filtered.length} users found</div>
 
-      {/* Desktop: Table view */}
       {!isMobile && (
         <table className="table">
           <thead>
@@ -42,7 +41,6 @@ export default function UserList() {
         </table>
       )}
 
-      {/* Mobile: Card view */}
       {isMobile && (
         <div className="grid">
           {paged.map((u, idx) => (

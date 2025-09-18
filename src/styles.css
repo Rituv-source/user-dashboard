@@ -166,3 +166,79 @@ select {
   justify-content: center;
   padding-top: 8px;
 }
+
+.login-card {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 32px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.login-card label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.login-card input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Login button */
+.login-card .btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-card .btn:hover {
+  background: #3730a3;
+}
+
+/* Footer below button */
+.login-footer {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.login-footer .forgot {
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-footer .forgot:hover {
+  text-decoration: underline;
+}
+
+.login-footer .note {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
